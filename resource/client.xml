@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+<constant name="struts.devMode" value="true"/>
+<package name="client_suvidha" extends="struts-default,json-default" namespace="/view/client">
+     
+     
+     <!-- Area master works from here  -->
+       <action name="beforeClientAdd" class="com.ctrl.xsgx.suvidha.client.ClientCtrl" method="beforeClientAdd">
+			<result name="success">/view/client/CreateClient.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		 <action name="addClient" class="com.ctrl.xsgx.suvidha.client.ClientCtrl" method="addClient">
+			<result name="success">/view/success.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		 <action name="beforeMapCardsWithClient" class="com.ctrl.xsgx.suvidha.client.ClientCtrl" method="beforeMapCardsWithClient">
+			<result name="success">/view/client/MapCardWithClient.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<action name="getCardReferringDetails" class="com.ctrl.xsgx.suvidha.client.ClientCtrl" method="getCardReferringDetails">
+			<result name="success">/view/client/MapCardWithClientReffering.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<action name="getMappedSchemes" class="com.ctrl.xsgx.suvidha.client.ClientCtrl" method="getMappedSchemes">
+			<result name="success">/view/client/MapCardWithClientRefferingCardNumber.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		 <action name="mapCardWithClient" class="com.ctrl.xsgx.suvidha.client.ClientCtrl" method="mapCardWithClient">
+			<result name="success">/view/success.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		 <action name="beforeClientEdit" class="com.ctrl.xsgx.suvidha.client.ClientCtrl">
+			<result name="success">/view/client/EditClient.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<action name="editClient" class="com.ctrl.xsgx.suvidha.client.ClientCtrl" method="editClient">
+			<result name="success">/view/success.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<action name="clientView" class="com.ctrl.xsgx.suvidha.client.ClientCtrl" method="viewClient">
+			<result name="success" type="json"></result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		
+		<action name="beforeClientMapAgent" class="com.ctrl.xsgx.suvidha.client.ClientCtrl" method="beforeClientMapAgent">
+			<result name="success">/view/client/ClientAgentMap.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		
+		 <action name="clientAgentMapping" class="com.ctrl.xsgx.suvidha.client.ClientCtrl" method="clientAgentMapping">
+			<result name="success">/view/success.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<action name="beforeClientSurrender" class="com.ctrl.xsgx.suvidha.client.ClientCtrl" method="beforeClientSurrender">
+			<result name="success">/view/client/ClientSchemeSurrender.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<action name="getClientMapSchemes" class="com.ctrl.xsgx.suvidha.client.ClientCtrl" method="clientMapSchemes">
+			<result name="success">/view/client/clientMappedScheme.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<action name="getClientSchemeStatus" class="com.ctrl.xsgx.suvidha.client.ClientCtrl" method="clientSchemeStatus">
+			<result name="success">/view/client/clientSchemeStatus.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		 <action name="clientSchemeSurrender" class="com.ctrl.xsgx.suvidha.client.ClientCtrl" method="clientSchemeSurrender">
+			<result name="success">/view/success.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		
+		<action name="beforeReopenScheme" class="com.ctrl.xsgx.suvidha.client.ClientCtrl" method="beforeClientSurrender">
+			<result name="success">/view/client/ClientSchemeReopen.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		
+		<action name="clientSchemeReopen" class="com.ctrl.xsgx.suvidha.client.ClientCtrl" method="clientSchemeReopen">
+			<result name="success">/view/success.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		
+		<action name="fullDetail" class="com.ctrl.xsgx.suvidha.client.ClientCtrl">
+			<result name="success">/view/client/clientFullDetails.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		
+		<action name="clientBasicDetailsView" class="com.ctrl.xsgx.suvidha.client.ClientCtrl" method="clientBasicDetailsView">
+			<result name="success">/view/client/clientBasicDetailsView.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<action name="beforeclientSchemeSummirizeReport" class="com.ctrl.xsgx.suvidha.client.ClientCtrl" method="beforeclientSchemeSummirizeReport">
+			<result name="success">/view/client/clientSchemeSummirizeReport.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		
+		<action name="clientSchemeSummirizeReportAction" class="com.ctrl.xsgx.suvidha.client.ClientCtrl" method="clientSchemeSummirizeReport">
+			<result name="success" type="json"></result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<action name="beforeclientSchemeWiseReport" class="com.ctrl.xsgx.suvidha.client.ClientCtrl" method="beforeclientSchemeWiseReport">
+			<result name="success">/view/client/clientSchemeWiseReport.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<action name="clientDocuments" class="com.ctrl.xsgx.suvidha.client.ClientCtrl" method="clientDocuments">
+			<result name="success">/view/client/clientDocuments.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		
+		<action name="clientSchemesReport" class="com.ctrl.xsgx.suvidha.client.ClientCtrl" method="clientSchemesReport">
+			<result name="success" type="json"></result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		
+		 <action name="download" class="com.ctrl.xsgx.suvidha.client.ClientCtrl" method="download">
+			<result name="download" type="stream">
+		      <param name="contentType">application/octet-stream</param>
+		      <param name="inputName">fileInputStream</param>
+		      <param name="contentDisposition">attachment;filename=%{fileName}</param>
+		      <param name="bufferSize">4096</param>
+	    </result>
+	    <result name="login">/view/common_pages/invalidSession.jsp</result>
+	    <result name="error">/view/common_pages/error.jsp</result>
+	   </action>
+		<!-- Close scheme works here -->
+		
+		<action name="beforeClientClose" class="com.ctrl.xsgx.suvidha.client.ClientSchemeCloseCtrl" method="beforeClientClose">
+			<result name="success">/view/client/closeClientScheme.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<action name="clientOpneSchemes" class="com.ctrl.xsgx.suvidha.client.ClientSchemeCloseCtrl" method="clientOpneSchemes">
+			<result name="success">/view/client/clientMappedScheme.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<action name="getClientOpenSchemeStatusForClose" class="com.ctrl.xsgx.suvidha.client.ClientSchemeCloseCtrl" method="clientOpenSchemeStatus">
+			<result name="success">/view/client/clientOpenScheme.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<action name="clientSchemeClose" class="com.ctrl.xsgx.suvidha.client.ClientSchemeCloseCtrl" method="clientSchemeClose">
+			<result name="success">/view/success.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		
+		<action name="beforeCloseSchemeReward" class="com.ctrl.xsgx.suvidha.client.ClientSchemeCloseCtrl" method="beforeClientClose">
+			<result name="success">/view/client/closeSchemeReward.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<action name="clientCloseSchemes" class="com.ctrl.xsgx.suvidha.client.ClientSchemeCloseCtrl" method="clientCloseSchemes">
+			<result name="success">/view/client/clientMappedCloseScheme.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		
+		<action name="getClientRewardData" class="com.ctrl.xsgx.suvidha.client.ClientSchemeCloseCtrl" method="clientCloseSchemeStatusForReward">
+			<result name="success">/view/client/closeSchemeClientRewardDone.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		
+		<action name="todayGoldDetails" class="com.ctrl.xsgx.suvidha.client.ClientSchemeCloseCtrl" method="todayGoldDetails">
+			<result name="success">/view/client/todayGoldDetails.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<action name="clientSchemeCloseReward" class="com.ctrl.xsgx.suvidha.client.ClientSchemeCloseCtrl" method="clientSchemeCloseReward">
+			<result name="success">/view/success.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		
+		<!-- Client scheme surrender reward works from here -->
+		
+		
+		<action name="getClientSchemeSurrender" class="com.ctrl.xsgx.suvidha.client.ClientSchemeCloseCtrl" method="clientSchemeSurrender">
+			<result name="success">/view/client/clientSurederScheme.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<action name="getClientSchemeSurrenderDetail" class="com.ctrl.xsgx.suvidha.client.ClientSchemeCloseCtrl" method="clientSchemeSurrenderDetail">
+			<result name="success">/view/client/SurrenderSchemeDetail.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<action name="clientSchemeSurrenderReward" class="com.ctrl.xsgx.suvidha.client.ClientSchemeCloseCtrl" method="clientSchemeSurrenderReward">
+			<result name="success">/view/success.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<!-- Lucky draw scheme works from here -->
+		
+		<action name="beforeLuckyDrawScheme" class="com.ctrl.xsgx.suvidha.client.LuckyDrawScheme" method="beforeLuckyDrawScheme">
+			<result name="success">/view/client/LuckyDrawScheme.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<action name="clientOpneSchemesForLuckDraw" class="com.ctrl.xsgx.suvidha.client.LuckyDrawScheme" method="clientOpneSchemesForLuckDraw">
+			<result name="success">/view/client/clientMappedScheme.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		
+		<action name="clientSchemeLuckDraw" class="com.ctrl.xsgx.suvidha.client.LuckyDrawScheme" method="clientSchemeLuckDraw">
+			<result name="success">/view/success.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<action name="clientSchemesForLuckDrawReward" class="com.ctrl.xsgx.suvidha.client.LuckyDrawScheme" method="clientOpneSchemesForLuckDraw">
+			<result name="success">/view/client/clientSchemesForLuckDrawReward.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<action name="clientCloseSchemeDetail" class="com.ctrl.xsgx.suvidha.client.LuckyDrawScheme" method="clientCloseSchemeDetail">
+			<result name="success">/view/client/clientCloseSchemeDetailForLuckyReward.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<action name="todayGoldDetailsWithLuckDraw" class="com.ctrl.xsgx.suvidha.client.ClientSchemeCloseCtrl" method="todayGoldDetails">
+			<result name="success">/view/client/todayGoldDetailsWithLuckDraw.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<action name="cashPrizeLuckyDraw" class="com.ctrl.xsgx.suvidha.client.ClientSchemeCloseCtrl" method="cashPrizeLuckyDraw">
+			<result name="success">/view/client/CashForScheme.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<action name="clientLuckDrawReward" class="com.ctrl.xsgx.suvidha.client.LuckyDrawScheme" method="clientLuckDrawReward">
+			<result name="success">/view/success.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<!-- Client Scheme report with search and excel download -->
+		
+		<action name="beforeClientReport" class="com.ctrl.xsgx.suvidha.client.ClientSchemeReport" method="beforeClientReport">
+			<result name="success">/view/client/AllClientReportSearch.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		<action name="clientReportSearchResult" class="com.ctrl.xsgx.suvidha.client.ClientSchemeReport" method="clientReportSearchResult">
+			<result name="success">/view/client/AllClientReportSearchResult.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		<action name="schemeFullDetail" class="com.ctrl.xsgx.suvidha.client.ClientSchemeReport" method="schemeFullDetail">
+			<result name="success">/view/client/schemeFullDetail.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<action name="actionFullDetail" class="com.ctrl.xsgx.suvidha.client.ClientSchemeReport" method="beforeActionFullDetail">
+			<result name="success">/view/client/actionFullDetail.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<action name="actionFullDetailGrid" class="com.ctrl.xsgx.suvidha.client.ClientSchemeReport" method="actionFullDetail">
+			<result name="success" type="json"></result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		
+		
+</package>
+</struts>

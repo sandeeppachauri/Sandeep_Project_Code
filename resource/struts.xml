@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+
+<constant name="struts.custom.i18n.resources" value="ApplicationResources" />
+<constant name="struts.convention.default.parent.package" value="common_work_suvidha"/>
+<constant name="struts.devMode" value="true"/>
+<constant name="struts.configuration.xml.reload" value="false" />
+<constant name="struts.serve.static" value="true" />
+<constant name="struts.serve.static.browserCache" value="false" />
+
+<package name="commonpackage" extends="struts-default,json-default">
+	<action name="loginCtr"  class="com.ctrl.xsgx.suvidha.login.LoginCtrl" method="loginCtr">
+	             <result name="success">/dashboard.jsp</result>
+	             <result name="clientSuccess">/view/clientLogin/dashboardClient.jsp</result>
+	             <result name="error">/LognError.jsp</result>
+	 </action>
+ 
+     <action name="logout"  class="com.ctrl.xsgx.suvidha.login.LoginCtrl">
+             <result name="success">/Login.jsp</result>
+             <result name="login">/view/invalidSession.jsp</result>
+     </action>  
+     
+	 
+ 
+</package>
+<include file="/commonwork.xml"/>
+<include file="/client.xml"/>
+<include file="/employee.xml"/>
+<include file="/scheme.xml"/>
+<include file="/clientLogin.xml"/>
+<constant name="struts.multipart.maxSize" value="900000000000000000" />
+</struts>

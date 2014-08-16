@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+<session-factory>
+
+
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/suvidha</property>
+		<property name="hibernate.connection.username">suvidha_suvidha</property>
+		<property name="hibernate.connection.password">suvidha_suvidha</property>
+		<property name="hibernate.connection.pool_size">1000</property>
+		<property name="show_sql">false</property>
+		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		<property name="hibernate.transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory</property>
+		<property name="hibernate.current_session_context_class">thread</property>
+		<mapping class="com.databean.xsgx.suvidha.commonmaster.Login"/>
+  		<mapping class="com.databean.xsgx.suvidha.commonmaster.AreaDB"/>
+  		<mapping class="com.databean.xsgx.suvidha.commonmaster.SourceDB"/>
+  		<mapping class="com.databean.xsgx.suvidha.commonmaster.Smtp"/>
+  		<mapping class="com.databean.xsgx.suvidha.commonmaster.Employee"/>
+  		<mapping class="com.databean.xsgx.suvidha.commonmaster.AreaEmployeeMapping"/>
+  		<mapping class="com.databean.xsgx.suvidha.commonmaster.GoldPrice"/>
+  		<mapping class="com.databean.xsgx.suvidha.commonmaster.Client"/>
+  		<mapping class="com.databean.xsgx.suvidha.commonmaster.UploadedDocument"/>
+  		<mapping class="com.databean.xsgx.suvidha.commonmaster.ClientScheme"/>
+  		<mapping class="com.databean.xsgx.suvidha.commonmaster.ClientAgentMapping"/>
+  		<mapping class="com.databean.xsgx.suvidha.commonmaster.DailyCollectionDB"/>
+  		<mapping class="com.databean.xsgx.suvidha.commonmaster.User"/>
+  		<mapping class="com.databean.xsgx.suvidha.scheme.Scheme"/>
+  		<mapping class="com.databean.xsgx.suvidha.commonmaster.SchemeActionHistory"/>
+  		<mapping class="com.databean.xsgx.suvidha.commonmaster.SchemeRewardData"/>
+  		<mapping class="com.databean.xsgx.suvidha.commonmaster.ClientSchemeSurrenderReward"/>
+  		<mapping class="com.databean.xsgx.suvidha.commonmaster.ClientSchemeLuckyDraw"/>
+  		
+        <mapping class="com.databean.xsgx.suvidha.scheme.SchemeType"/>
+        <mapping class="com.databean.xsgx.suvidha.scheme.SchemeBonus"/>
+        <mapping class="com.databean.xsgx.suvidha.scheme.SchemeWithdraw"/>
+        <mapping class="com.databean.xsgx.suvidha.scheme.LuckyDraw"/>
+        <mapping class="com.databean.xsgx.suvidha.scheme.ExtraLoyality"/>
+        <mapping class="com.databean.xsgx.suvidha.scheme.IncermentalBean"/>
+        <mapping class="com.databean.xsgx.suvidha.scheme.GroupMaster"/>
+        <mapping class="com.databean.xsgx.suvidha.scheme.GroupConfiguration"/>
+        <mapping class="com.databean.xsgx.suvidha.scheme.GroupClientMapping"/>
+        
+        <!-- Kitty management -->
+        <mapping class="com.databean.xsgx.suvidha.commonmaster.KittyManagment"/>
+        <mapping class="com.databean.xsgx.suvidha.commonmaster.EmpGroupMapping"/>
+</session-factory>
+</hibernate-configuration>

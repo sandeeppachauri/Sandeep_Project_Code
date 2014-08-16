@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<constant name="struts.devMode" value="true" />
+	<package name="scheme_suvidha" extends="struts-default,json-default"
+		namespace="/view/scheme">
+
+		<action name="beforeSchemeAdd" class="com.ctrl.xsgx.suvidha.scheme.SchemeCtrl"
+			method="initilize">
+			<result name="success">/view/scheme/createScheme.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+
+		<action name="schemeNew" class="com.ctrl.xsgx.suvidha.scheme.SchemeCtrl"
+			method="addNewScheme">
+			<result name="success">/view/success.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+
+		<action name="schemeNewType" method="addSchemeType"
+			class="com.ctrl.xsgx.suvidha.scheme.SchemeCtrl">
+			<result name="success">/view/success.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+
+		<action name="schemeBonusAdd" method="addSchemeBonus"
+			class="com.ctrl.xsgx.suvidha.scheme.SchemeCtrl">
+			<result name="success">/view/success.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+
+		<action name="schemeNewCondition" method="addWithdrawCondition"
+			class="com.ctrl.xsgx.suvidha.scheme.SchemeCtrl">
+			<result name="success">/view/success.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+
+		<action name="getSchemeDetails" method="getSchemeDetails"
+			class="com.ctrl.xsgx.suvidha.scheme.SchemeCtrl">
+			<result name="success">/view/scheme/schemeFrequencyDays.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+
+		<action name="schemeLuckyDrawAdd" method="addLuckyDraw"
+			class="com.ctrl.xsgx.suvidha.scheme.SchemeCtrl">
+			<result name="success">/view/success.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+
+		<action name="extraLoyalityAdd" method="addExtraLoyality"
+			class="com.ctrl.xsgx.suvidha.scheme.SchemeCtrl">
+			<result name="success">/view/success.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+
+		<action name="beforeSchemeEdit" method="viewSchemeDetails"
+			class="com.ctrl.xsgx.suvidha.scheme.SchemeCtrl">
+			<result name="success">/view/scheme/EditScheme.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+
+		<action name="viewScheme" method="viewSchemeFullDetails"
+			class="com.ctrl.xsgx.suvidha.scheme.SchemeCtrl">
+			<result name="success" type="json"></result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+
+		<action name="getSchemeCondition" method="viewSchemeConditionDetails"
+			class="com.ctrl.xsgx.suvidha.scheme.SchemeCtrl">
+			<result name="success">/view/scheme/schemeConditionDetails.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+
+		<action name="viewSchemesWithdCond" method="viewSchemeCondDetails"
+			class="com.ctrl.xsgx.suvidha.scheme.SchemeCtrl">
+			<result name="success" type="json"></result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		<!-- Incremental scheme works -->
+
+		<action name="allIncrmtnlSchemes" method="allIncrmtnlSchemes"
+			class="com.ctrl.xsgx.suvidha.scheme.SchemeCtrl">
+			<result name="success">/view/scheme/allIncrmtnlSchemes.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+
+		<action name="drawIncrtmntText" method="drawIncrtmntText"
+			class="com.ctrl.xsgx.suvidha.scheme.SchemeCtrl">
+			<result name="success">/view/scheme/drawIncrtmntText.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+
+		<action name="incrmtnlSchemeAdd" method="incrmtnlSchemeAdd"
+			class="com.ctrl.xsgx.suvidha.scheme.SchemeCtrl">
+			<result name="success">/view/success.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+
+		<!-- Scheme mapping with group -->
+
+		<action name="beforeMapWithGroup" class="com.ctrl.xsgx.suvidha.scheme.SchemeCtrl"
+			method="beforeMapWithGroup">
+			<result name="success">/view/scheme/groupScheme.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+
+		<action name="createGroup" class="com.ctrl.xsgx.suvidha.scheme.SchemeCtrl"
+			method="createGroup">
+			<result name="success">/view/success.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+
+		<action name="beforeMapGroupWithClient" class="com.ctrl.xsgx.suvidha.scheme.SchemeCtrl"
+			method="beforeMapGroupWithClient">
+			<result name="success">/view/scheme/MapGroupWithCustomer.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+
+		<action name="mapGroupWithClient" class="com.ctrl.xsgx.suvidha.scheme.SchemeCtrl"
+			method="mapGroupWithClient">
+			<result name="success">/view/success.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+
+		<action name="beforeMappingGroupWithClientScheme" class="com.ctrl.xsgx.suvidha.scheme.SchemeCtrl"
+			method="beforeMappingGroupWithClientScheme">
+			<result name="success">/view/scheme/GroupWithCustomerSchemeMap.jsp
+			</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+
+		<action name="checkGroupMembers" class="com.ctrl.xsgx.suvidha.scheme.SchemeCtrl"
+			method="checkGroupMembers">
+			<result name="success">/view/success.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+
+		<action name="getClientGroupableSchemes" class="com.ctrl.xsgx.suvidha.scheme.SchemeCtrl"
+			method="getClientGroupableSchemes">
+			<result name="success">/view/scheme/GetClientGroupableSchemes.jsp
+			</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+
+		<action name="mapGroup" class="com.ctrl.xsgx.suvidha.scheme.SchemeCtrl"
+			method="mapGroup">
+			<result name="success">/view/success.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+
+		<action name="beforeViewGroup" class="com.ctrl.xsgx.suvidha.scheme.SchemeCtrl">
+			<result name="success">/view/scheme/EditGroup.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+
+		<action name="viewGroup" method="viewGroup"
+			class="com.ctrl.xsgx.suvidha.scheme.SchemeCtrl">
+			<result name="success" type="json"></result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<action name="editGroup" class="com.ctrl.xsgx.suvidha.scheme.SchemeCtrl" method="editGroup">
+			<result name="success">/view/scheme/EditGroup.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<action name="groupFullDetail" class="com.ctrl.xsgx.suvidha.scheme.SchemeCtrl" method="groupFullDetail">
+			<result name="success">/view/scheme/ViewMappedMemberInGroup.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<!-- Group related reports -->
+		
+		<action name="beforeViewGroupReport" class="com.ctrl.xsgx.suvidha.scheme.SchemeCtrl">
+			<result name="success">/view/groupMemberReport/GroupMemberSearch.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<action name="viewGroupReport" class="com.ctrl.xsgx.suvidha.scheme.SchemeCtrl" method="viewGroupReport">
+			<result name="success">/view/groupMemberReport/GroupMemberReport.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<action name="fullReferenceDetails" class="com.ctrl.xsgx.suvidha.scheme.SchemeCtrl" method="fullReferenceDetails">
+			<result name="success">/view/groupMemberReport/FullReferenceDetailsReport.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<action name="viewGroupMemberCollectionDetail" class="com.ctrl.xsgx.suvidha.scheme.SchemeCtrl" method="viewGroupMemberCollectionDetail">
+			<result name="success">/view/groupMemberReport/ViewGroupMemberCollectionDetail.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+	</package>
+</struts>

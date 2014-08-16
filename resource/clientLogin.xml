@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+<constant name="struts.devMode" value="true"/>
+<package name="client_suvidha_login" extends="struts-default,json-default" namespace="/view/clientlogin">
+
+
+       <action name="beforeMyInfo" class="com.ctrl.xsgx.suvidha.clientlogin.ClientLoginWork" method="beforeMyInfo">
+			<result name="success">/view/clientLogin/myinfo.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		 <action name="updateClientInfo" class="com.ctrl.xsgx.suvidha.clientlogin.ClientLoginWork" method="updateClientInfo">
+			<result name="success">/view/success.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<action name="beforeMySchemes" class="com.ctrl.xsgx.suvidha.clientlogin.ClientLoginWork" method="beforeMySchemes">
+			<result name="success">/view/clientLogin/myschemes.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<action name="beforeMyContactUs" class="com.ctrl.xsgx.suvidha.clientlogin.ClientLoginWork" method="beforeMyContactUs">
+			<result name="success">/view/clientLogin/contactus.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<action name="beforePayUs" class="com.ctrl.xsgx.suvidha.clientlogin.ClientLoginWork" method="beforePayUs">
+			<result name="success">/view/clientLogin/payus.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+</package>
+</struts>

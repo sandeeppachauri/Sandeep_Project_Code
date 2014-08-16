@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+<constant name="struts.devMode" value="true"/>
+<package name="common_work_suvidha" extends="struts-default,json-default" namespace="/view/common">
+     
+     
+     <!-- Area master works from here  -->
+       <action name="beforeAraeAdd" class="com.ctrl.xsgx.suvidha.commonmaster.CommonMasterOper">
+			<result name="success">/view/master/CreateArea.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		 <action name="areaMasterAdd" class="com.ctrl.xsgx.suvidha.commonmaster.CommonMasterOper" method="areaMasterAdd">
+			<result name="success">/view/success.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		
+		 <action name="beforeArededit" class="com.ctrl.xsgx.suvidha.commonmaster.CommonMasterOper">
+			<result name="success">/view/master/EditMaster.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<action name="viewArea" class="com.ctrl.xsgx.suvidha.commonmaster.CommonMasterOper" method="viewArea">
+			<result name="success" type="json"></result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<action name="editArea" class="com.ctrl.xsgx.suvidha.commonmaster.CommonMasterOper" method="editArea">
+			<result name="success">/view/success.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+	
+	
+	
+		<!-- Source master work from here -->
+	
+		<action name="beforeSourceAdd" class="com.ctrl.xsgx.suvidha.commonmaster.CommonMasterOper">
+			<result name="success">/view/master/CreateSource.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		 <action name="sourceMasterAdd" class="com.ctrl.xsgx.suvidha.commonmaster.CommonMasterOper" method="sourceMasterAdd">
+			<result name="success">/view/success.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		
+		 <action name="beforeSourceEdit" class="com.ctrl.xsgx.suvidha.commonmaster.CommonMasterOper">
+			<result name="success">/view/master/EditSource.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<action name="viewSource" class="com.ctrl.xsgx.suvidha.commonmaster.CommonMasterOper" method="viewSource">
+			<result name="success" type="json"></result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<action name="editSource" class="com.ctrl.xsgx.suvidha.commonmaster.CommonMasterOper" method="editSource">
+			<result name="success">/view/success.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		<!-- Source master work from here -->
+		
+		<!-- Source master work from here -->
+	
+		<action name="beforeSmtpAdd" class="com.ctrl.xsgx.suvidha.commonmaster.CommonMasterOper">
+			<result name="success">/view/master/CreateSMTP.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		 <action name="smtpAdd" class="com.ctrl.xsgx.suvidha.commonmaster.CommonMasterOper" method="smtpAdd">
+			<result name="success">/view/success.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		
+		 <action name="beforeSmtpEdit" class="com.ctrl.xsgx.suvidha.commonmaster.CommonMasterOper">
+			<result name="success">/view/master/EditSMTP.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<action name="viewSmtp" class="com.ctrl.xsgx.suvidha.commonmaster.CommonMasterOper" method="viewSmtp">
+			<result name="success" type="json"></result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<action name="editSmtp" class="com.ctrl.xsgx.suvidha.commonmaster.CommonMasterOper" method="editSmtp">
+			<result name="success">/view/success.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		<!-- Source master work from here -->
+		
+		<!--  Gold price setting and view  -->
+		
+		 <action name="beforeDailyGoldPrice" class="com.ctrl.xsgx.suvidha.commonmaster.CommonMasterOper">
+			<result name="success">/view/master/goldPriceAdd.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+			
+		<action name="addGoldRate" class="com.ctrl.xsgx.suvidha.commonmaster.CommonMasterOper" method="addGoldRate">
+			<result name="success">/view/success.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>	
+		
+		
+		 <action name="beforeDailyGoldPriceView" class="com.ctrl.xsgx.suvidha.commonmaster.CommonMasterOper">
+			<result name="success">/view/master/goldPriceEdit.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		
+		<action name="viewGoldRate" class="com.ctrl.xsgx.suvidha.commonmaster.CommonMasterOper" method="viewGoldRate">
+			<result name="success" type="json"></result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<action name="editGoldRate" class="com.ctrl.xsgx.suvidha.commonmaster.CommonMasterOper" method="editGoldRate">
+			<result name="success">/view/success.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<action name="fullDetailGoldPrice" class="com.ctrl.xsgx.suvidha.commonmaster.CommonMasterOper" method="fullDetailGoldPrice">
+			<result name="success">/view/master/fullDetailsOfGold.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		<!--  Gold price setting and view  -->
+		
+		
+		<!-- Daily Collection report upload and view and search -->
+		
+		<action name="beforeUploadCollection" class="com.ctrl.xsgx.suvidha.dailycollection.DailyCollectionUpload" method="beforeUploadCollection">
+			<result name="success">/view/dailyCollection/uploadDailyCollection.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<action name="clientAllSchemes" class="com.ctrl.xsgx.suvidha.dailycollection.DailyCollectionUpload" method="schemeMappedWithClient">
+			<result name="success">/view/dailyCollection/clientAllSchemes.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<action name="uploadDailyCollection" class="com.ctrl.xsgx.suvidha.dailycollection.DailyCollectionUpload" method="uploadDailyCollection">
+			<result name="success">/view/success.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<action name="dailyCollectionMannual" class="com.ctrl.xsgx.suvidha.dailycollection.DailyCollectionUpload" method="dailyCollectionMannual">
+			<result name="success">/view/success.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<action name="beforeCollectionReport" class="com.ctrl.xsgx.suvidha.dailycollection.DailyCollectionUploadReport" method="fullDetailGoldPrice">
+			<result name="success">/view/dailyCollection/viewDailyCollection.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		
+		<action name="searchCollectionReport" class="com.ctrl.xsgx.suvidha.dailycollection.DailyCollectionUploadReport" method="searchCollectionReport">
+			<result name="success">/view/dailyCollection/SearchReportDailyCollection.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+
+		<action name="searchCollectionReportView" class="com.ctrl.xsgx.suvidha.dailycollection.DailyCollectionUploadReport" method="searchCollectionReportView">
+			<result name="success" type="json"></result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		
+		<action name="searchCollectionGraphicalReport" class="com.ctrl.xsgx.suvidha.dailycollection.DailyCollectionUploadReport" method="searchCollectionReportGraph">
+			<result name="success">/view/dailyCollection/searchReportDailyCollectionGraph.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<action name="downloadReport" method="downloadReport" class="com.suvidha.common.DownloadReport">
+           <result name="success" type="stream">
+           <param name="contentType">application/vnd.ms-excel</param>
+           <param name="inputName">excelStream</param>
+           <param name="contentDisposition">attachment; filename="${downloadFile}"</param>
+           <param name="bufferSize">1024</param>
+           </result>
+           <result name="error" >/view/common_pages/error.jsp</result>
+           <result name="login" >/view/common_pages/invalidSession.jsp</result>
+       </action>
+       
+       <!-- Daily Collection report upload and view and search -->
+       
+       
+       <!-- User management work start from here -->
+       
+       <action name="beforeUserAdd" class="com.ctrl.xsgx.suvidha.user.UserCtrl">
+			<result name="success">/view/user/CreateUser.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		
+		<action name="createUser" class="com.ctrl.xsgx.suvidha.user.UserCtrl" method="createUser">
+			<result name="success">/view/success.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<action name="beforeUserEdit" class="com.ctrl.xsgx.suvidha.user.UserCtrl">
+			<result name="success">/view/user/EditUser.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<action name="viewUser" class="com.ctrl.xsgx.suvidha.user.UserCtrl" method="viewUserData">
+			<result name="success" type="json"></result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<action name="beforePwdReset" class="com.ctrl.xsgx.suvidha.user.UserCtrl" method="beforePwdReset">
+			<result name="success">/view/user/pwdReset.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<action name="pwdReset" class="com.ctrl.xsgx.suvidha.user.UserCtrl" method="pwdReset">
+			<result name="success">/view/success.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<!-- Summerize report -->
+		
+		<action name="beforeCollectionSummerizeReport" class="com.ctrl.xsgx.suvidha.dailycollection.SummerizeReport" method="beforeCollectionSummerizeReport">
+			<result name="success">/view/dailyCollection/SummerrizeSearch.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<action name="CollectionReportSearch" class="com.ctrl.xsgx.suvidha.dailycollection.SummerizeReport" method="collectionReportSearch">
+			<result name="success">/view/dailyCollection/CollectionReportSearch.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<!-- Client wise report of scheme -->
+		
+		<action name="beforeCollectionClientReport" class="com.ctrl.xsgx.suvidha.dailycollection.SummerizeReport" method="beforeCollectionSummerizeReport">
+			<result name="success">/view/dailyCollection/ClientSummerrizeSearch.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<action name="CollectionReportSearchClientWise" class="com.ctrl.xsgx.suvidha.dailycollection.SummerizeReport" method="collectionReportSearchClientWise">
+			<result name="success">/view/dailyCollection/CollectionReportSearchClientWise.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<!-- Backup Taking work starts from here -->
+		
+		<action name="beforeBackup" class="com.ctrl.xsgx.suvidha.backup.BackupProcess">
+			<result name="success">/view/backup/TakeBackup.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		<action name="takeBackup" class="com.ctrl.xsgx.suvidha.backup.BackupProcess" method="takeBackup">
+			<result name="success">/view/success.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<!-- Bday & anvrsy work -->
+		
+		<action name="bdayAny" class="com.ctrl.xsgx.suvidha.commonmaster.CommonMasterOper" method="bdayAndAnvrsyList">
+			<result name="success">/bdayanry.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<action name="beforeSendWishses" class="com.ctrl.xsgx.suvidha.commonmaster.CommonMasterOper" method="beforeSendWishses">
+			<result name="success">/sendSMS.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<!-- Scheme Status Report -->
+		<action name="beforeClientSchemeStatusReport" class="com.ctrl.xsgx.suvidha.dailycollection.SummerizeReport" method="beforeClientSchemeStatusReport">
+			<result name="success">/view/dailyCollection/SummerrizeStatusSearch.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<action name="summerrizeStatusReport" class="com.ctrl.xsgx.suvidha.dailycollection.SummerizeReport" method="summerrizeStatusReport">
+			<result name="success">/view/dailyCollection/SummerrizeStatusReport.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<!-- Pending payment report work -->
+		
+		<action name="beforePaymentPandingReport" class="com.ctrl.xsgx.suvidha.dailycollection.SummerizeReport" method="beforePaymentPandingReport">
+			<result name="success">/view/dailyCollection/PendingPaymentReportSearch.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		
+		<action name="paymentPandingReportSearchResult" class="com.ctrl.xsgx.suvidha.dailycollection.SummerizeReport" method="paymentPandingReportSearchResult">
+			<result name="success">/view/dailyCollection/PaymentPandingReportSearchResult.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+</package>
+</struts>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+<constant name="struts.devMode" value="true"/>
+<package name="employee_suvidha" extends="struts-default,json-default" namespace="/view/employee">
+     
+     
+     <!-- Area master works from here  -->
+       <action name="beforeEmployeeAdd" class="com.ctrl.xsgx.suvidha.employee.EmployeeCtrl">
+			<result name="success">/view/employee/CreateEmployee.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		
+		 <action name="employeeAdd" class="com.ctrl.xsgx.suvidha.employee.EmployeeCtrl" method="employeeAdd">
+			<result name="success">/view/success.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		
+		<action name="beforeEmployeeEdit" class="com.ctrl.xsgx.suvidha.employee.EmployeeCtrl">
+			<result name="success">/view/employee/EditEmployee.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<action name="viewEmp" class="com.ctrl.xsgx.suvidha.employee.EmployeeCtrl" method="viewEmp">
+			<result name="success" type="json"></result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<action name="editEmp" class="com.ctrl.xsgx.suvidha.employee.EmployeeCtrl" method="editEmp">
+			<result name="success">/view/success.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<action name="beforeEmployeeAreaMap" class="com.ctrl.xsgx.suvidha.employee.EmployeeCtrl" method="beforeEmployeeAreaMap">
+			<result name="success">/view/employee/EmployeeMapWithArea.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		 <action name="employeeAreaMapping" class="com.ctrl.xsgx.suvidha.employee.EmployeeCtrl" method="employeeAreaMapping">
+			<result name="success">/view/success.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<action name="fullDetail" class="com.ctrl.xsgx.suvidha.employee.EmployeeCtrl" method="fullDetailOfEmployeeArea">
+			<result name="success">/view/employee/employeeFullDetails.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		
+		<action name="deleteEmpFromArea" class="com.ctrl.xsgx.suvidha.employee.EmployeeCtrl" method="deleteEmpFromArea">
+			<result name="success">/view/success.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<!-- Kitty organization work for employee or organizer -->
+		<action name="beforeKittyManager" class="com.ctrl.xsgx.suvidha.employee.EmployeeCtrl" method="beforeKittyManager">
+			<result name="success">/view/employee/KittyManager.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<action name="getMapGroup" class="com.ctrl.xsgx.suvidha.employee.EmployeeCtrl" method="getMapGroup">
+			<result name="success">/view/employee/empMapGroup.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		
+		<action name="getMapGroupDetail" class="com.ctrl.xsgx.suvidha.employee.EmployeeCtrl" method="getMapGroupDetail">
+			<result name="success">/view/employee/GetMapGroupDetail.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<action name="mapOrganizerWithGroup" class="com.ctrl.xsgx.suvidha.employee.EmployeeCtrl" method="mapOrganizerWithGroup">
+			<result name="success">/view/success.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<action name="kittyOrganizationDone" class="com.ctrl.xsgx.suvidha.employee.EmployeeCtrl" method="kittyOrganizationDone">
+			<result name="success">/view/success.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<!-- Kitty manager report -->
+		
+		<action name="beforeViewKittyManager" class="com.ctrl.xsgx.suvidha.employee.EmployeeCtrl" method="beforeViewKittyManager">
+			<result name="success">/view/employee/ViewKittyManager.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+		
+		<action name="viewReport" class="com.ctrl.xsgx.suvidha.employee.EmployeeCtrl" method="viewReport">
+			<result name="success">/view/employee/ViewKittyManagerReport.jsp</result>
+			<result name="error">/view/error.jsp</result>
+			<result name="login">/view/invalidSession.jsp</result>
+		</action>
+</package>
+</struts>
